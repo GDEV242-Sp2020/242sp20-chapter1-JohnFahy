@@ -11,21 +11,39 @@
  */
 public class Picture
 {
-    private Square wall;
-    private Square window;
-    private Triangle roof;
+    private Square planet;
+    private Square monolith;
+    private Triangle mountain1;
+    private Triangle mountain2;
+    private Triangle mountain3;
+    private Triangle mountain4;
     private Circle sun;
+    private Circle sun2;
     private boolean drawn;
+    private Square sky;
+    private Person martian1;
+    private Person martian2;
+    private Person martian3;
+    private Person martian4;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture()
     {
-        wall = new Square();
-        window = new Square();
-        roof = new Triangle();  
+        planet = new Square();
+        monolith = new Square();
+        mountain1 = new Triangle(); 
+        mountain2 = new Triangle();
+        mountain3 = new Triangle();
+        mountain4 = new Triangle();
         sun = new Circle();
+        sun2 = new Circle();
+        sky = new Square();
+        martian1 = new Person();
+        martian2 = new Person();
+        martian3 = new Person();
+        martian4 = new Person();
         drawn = false;
     }
 
@@ -35,28 +53,80 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
-            wall.changeColor("blue");
-            wall.makeVisible();
+            planet.moveHorizontal(-310);
+            planet.moveVertical(20);
+            planet.changeSize(500);
+            planet.changeColor("red");
+            planet.makeVisible();
             
-            window.changeColor("black");
-            window.moveHorizontal(-120);
-            window.moveVertical(40);
-            window.changeSize(40);
-            window.makeVisible();
+            sky.moveHorizontal(-310);
+            sky.moveVertical(-480);
+            sky.changeSize(500);
+            sky.changeColor("black");
+            sky.makeVisible();
+            
+            monolith.changeColor("black");
+            monolith.moveHorizontal(-125);
+            monolith.moveVertical(40);
+            monolith.changeSize(40);
+            monolith.makeVisible();
     
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            mountain1.changeSize(60, 180);
+            mountain1.moveHorizontal(-120);
+            mountain1.moveVertical(-60);
+            mountain1.makeVisible();
+            
+            mountain2.changeSize(50, 170);
+            mountain2.moveHorizontal(-60);
+            mountain2.moveVertical(-50);
+            mountain2.makeVisible();
+            
+            mountain3.changeSize(40, 160);
+            mountain3.moveHorizontal(-5);
+            mountain3.moveVertical(-40);
+            mountain3.makeVisible();
+            
+            mountain4.changeSize(30, 150);
+            mountain4.moveHorizontal(50);
+            mountain4.moveVertical(-30);
+            mountain4.makeVisible();
     
             sun.changeColor("yellow");
             sun.moveHorizontal(100);
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+            
+            sun2.changeColor("yellow");
+            sun2.moveHorizontal(-100);
+            sun2.moveVertical(-50);
+            sun2.changeSize(40);
+            sun2.makeVisible();
+            
+            martian1.changeColor("green");
+            martian1.moveHorizontal(-125);
+            martian1.moveVertical(40);
+            martian1.changeSize(50, 25);
+            martian1.makeVisible();
+            
+            martian2.changeColor("green");
+            martian2.moveHorizontal(-100);
+            martian2.moveVertical(35);
+            martian2.changeSize(50, 25);
+            martian2.makeVisible();
+            
+            martian3.changeColor("green");
+            martian3.moveHorizontal(-80);
+            martian3.moveVertical(30);
+            martian3.changeSize(50, 25);
+            martian3.makeVisible();
+            
+            martian4.changeColor("green");
+            martian4.moveHorizontal(-60);
+            martian4.moveVertical(20);
+            martian4.changeSize(50, 25);
+            martian4.makeVisible();
+            
             drawn = true;
         }
     }
@@ -66,10 +136,11 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
-        window.changeColor("white");
-        roof.changeColor("black");
+        planet.changeColor("black");
+        monolith.changeColor("white");
+        mountain1.changeColor("black");
         sun.changeColor("black");
+        sky.changeColor("white");
     }
 
     /**
@@ -77,9 +148,9 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
-        window.changeColor("black");
-        roof.changeColor("green");
+        planet.changeColor("red");
+        monolith.changeColor("black");
+        mountain1.changeColor("green");
         sun.changeColor("yellow");
     }
 }
