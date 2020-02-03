@@ -139,8 +139,16 @@ public class Picture
         planet.changeColor("black");
         monolith.changeColor("white");
         mountain1.changeColor("black");
+        mountain2.changeColor("black");
+        mountain3.changeColor("black");
+        mountain4.changeColor("black");
         sun.changeColor("black");
+        sun2.changeColor("black");
         sky.changeColor("white");
+        martian1.changeColor("black");
+        martian2.changeColor("black");
+        martian3.changeColor("black");
+        martian4.changeColor("black");
     }
 
     /**
@@ -148,9 +156,18 @@ public class Picture
      */
     public void setColor()
     {
-        planet.changeColor("red");
-        monolith.changeColor("black");
-        mountain1.changeColor("green");
-        sun.changeColor("yellow");
+        planet.changeColor("black");
+        monolith.changeColor("white");
+        mountain1.changeColor("black");
+        mountain2.changeColor("black");
+        mountain3.changeColor("black");
+        mountain4.changeColor("black");
+        sun.changeColor("black");
+        sun2.changeColor("black");
+        sky.changeColor("white");
+        martian1.changeColor("black");
+        martian2.changeColor("black");
+        martian3.changeColor("black");
+        martian4.changeColor("black");
     }
 }
